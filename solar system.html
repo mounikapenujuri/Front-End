@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar System</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1538370965046-79c0d6907d47?fm=jpg&q=60&w=3000&auto=format&fit=crop") no-repeat center;
+    background-size:cover;
+}
+
+#solar{
+    position:relative;
+    width:900px;
+    height:900px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Sun */
+#sun{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:url("https://static.vecteezy.com/system/resources/thumbnails/049/731/430/small_2x/the-sun-s-fiery-surface-a-celestial-ball-of-plasma-with-a-transparent-background-png.png");
+    background-size:cover;
+    position:absolute;
+    z-index:100;
+}
+
+/* Orbit */
+.orbit{
+    position:absolute;
+    border:1px solid rgba(255,255,255,0.4);
+    border-radius:50%;
+    animation:rotate linear infinite;
+}
+
+/* Planet */
+.planet{
+    position:absolute;
+    top:-10px;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:50%;
+}
+
+@keyframes rotate{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* Mercury */
+#orbit1{
+    width:170px;
+    height:170px;
+    animation-duration:4s;
+}
+#mercury{
+    width:16px;
+    height:16px;
+    background:gray;
+}
+
+/* Venus */
+#orbit2{
+    width:240px;
+    height:240px;
+    animation-duration:6s;
+}
+#venus{
+    width:20px;
+    height:20px;
+    background:goldenrod;
+}
+
+/* Earth */
+#orbit3{
+    width:320px;
+    height:320px;
+    animation-duration:8s;
+}
+#earth{
+    width:22px;
+    height:22px;
+    background:deepskyblue;
+}
+
+/* Mars */
+#orbit4{
+    width:400px;
+    height:400px;
+    animation-duration:10s;
+}
+#mars{
+    width:18px;
+    height:18px;
+    background:red;
+}
+
+/* Jupiter */
+#orbit5{
+    width:500px;
+    height:500px;
+    animation-duration:14s;
+}
+#jupiter{
+    width:42px;
+    height:42px;
+    background:orange;
+}
+
+/* Saturn */
+#orbit6{
+    width:600px;
+    height:600px;
+    animation-duration:18s;
+}
+#saturn{
+    width:36px;
+    height:36px;
+    background:khaki;
+}
+
+/* Uranus */
+#orbit7{
+    width:700px;
+    height:700px;
+    animation-duration:22s;
+}
+#uranus{
+    width:28px;
+    height:28px;
+    background:lightblue;
+}
+
+/* Neptune */
+#orbit8{
+    width:800px;
+    height:800px;
+    animation-duration:26s;
+}
+#neptune{
+    width:28px;
+    height:28px;
+    background:blue;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="solar">
+
+<div id="sun"></div>
+
+<div class="orbit" id="orbit1">
+    <div class="planet" id="mercury"></div>
+</div>
+
+<div class="orbit" id="orbit2">
+    <div class="planet" id="venus"></div>
+</div>
+
+<div class="orbit" id="orbit3">
+    <div class="planet" id="earth"></div>
+</div>
+
+<div class="orbit" id="orbit4">
+    <div class="planet" id="mars"></div>
+</div>
+
+<div class="orbit" id="orbit5">
+    <div class="planet" id="jupiter"></div>
+</div>
+
+<div class="orbit" id="orbit6">
+    <div class="planet" id="saturn"></div>
+</div>
+
+<div class="orbit" id="orbit7">
+    <div class="planet" id="uranus"></div>
+</div>
+
+<div class="orbit" id="orbit8">
+    <div class="planet" id="neptune"></div>
+</div>
+
+</div>
+
+</body>
+</html>
